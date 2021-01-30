@@ -262,7 +262,6 @@ print_models(unprinted_designs[:], complited_models)
 
 print('\nПередача произвольного набора аргументов\n')
 
-'test line to git'
 
 
 
