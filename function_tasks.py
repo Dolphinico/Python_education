@@ -153,3 +153,64 @@ new_magicians = []
 show_magicians_3(magicians)
 make_great_1(magicians[:]) # копия списка magicians 
 show_magicians_3(new_magicians) # проверка на то, что есть и старый список и копия
+
+print('\nУпражнение 8-12\n')
+
+# 8-12 Сэндвичи: напишите функцию, которая получает список компонентов сэндвича 
+# Функция должна иметь один параметр для любого количества значений, переданных при вызове
+# функции, и выводить описание заказанного сэндвича Вызовите функцию три раза с разными количествами аргументов
+
+def making_sandwich_1(*components):
+    """Выводит список компонентов в сендвиче"""
+    print(components)
+
+making_sandwich_1('meat')
+making_sandwich_1('meat', 'salad')
+making_sandwich_1('meat', 'salad','tomato')
+
+def making_sandwich(*components):
+    """Выводит список компонентов в сендвиче"""
+    print('\nYour sandwich consis of: ')
+    for component in components:
+        print(component)
+
+making_sandwich('meat')
+making_sandwich('meat', 'salad')
+making_sandwich('meat', 'salad','tomato')
+
+print('\nУпражнение 8-13\n')
+# 8-13 Профиль: начните с копии программы user_profile.py Создайте собственный профиль
+# вызовом build_profile(), укажите имя, фамилию и три другие пары «ключ—значение» для вашего описания
+
+def user_accaunt(first, last, **user_info): 
+    """Строит словарь с информацией о пользователе"""
+    profile = {} 
+    profile['first_name'] = first
+    profile['last_name'] = last
+    for key, value in user_info.items(): 
+        profile[key] = value
+    return profile
+user_profile = user_accaunt('coffe', 'brazil', kind = 'latte', price='5$')
+print(user_profile)
+
+print('\nУпражнение 8-14\n')
+
+# 8-14 Автомобили: напишите функцию для сохранения информации об автомобиле в словаре 
+# Функция всегда должна возвращать производителя и название модели, но при этом она
+# может получать произвольное количество именованных аргументов
+# Вызовите функцию с передачей обязательной информации и еще двух пар «имя—значение» (например, цвет и комплектация)
+# Ваша функция должна работать для вызовов следующего вида:
+# car = make_car(‘subaru’, ‘outback’, color=’blue’, tow_package=True)
+
+# Выведите возвращаемый словарь и убедитесь в том, что вся информация была сохранена правильно
+
+def car_info(producer, model, **other_info):
+    """Сохранение и вывод информации об автомобиле"""
+    spec = {}
+    spec['brand'] = producer
+    spec['model'] = model
+    for key, value in other_info.items():
+        spec[key] = value
+    return spec
+car_spec = car_info('subaru', 'outback', color='blue', tow_package=True)
+print(car_spec)
