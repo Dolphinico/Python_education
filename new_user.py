@@ -23,7 +23,7 @@ print("His name is " + a.first_name.title() + " " + a.last_name.title() + ".")
 print("He lives in " + a.location.title() + ".")
 print("And  he works as "  + a.profession.title() + ".\n")
 
-b = User('alexandr', 'sokolov', 'polazna', 'QA tester' )
+b = User('alexandr', 'sokolov', 'polazna', 'qa tester' )
 b.greet_user()
 print("His name is " + b.first_name.title() + " " + b.last_name.title() + ".")
 print("He lives in " + b.location.title() + ".")
