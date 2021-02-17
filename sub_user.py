@@ -21,22 +21,21 @@ class User():
     def reset_login_attempts(self):
         """Обнуляет количество попыток входа"""
         self.login_attempts = 0
+class Admin(User):
+    """Модель администратора сайта"""
+    def __init__(self, first_name, last_name, location, profession):
+        """Инициализирует атрибуты администратора"""
+        super().__init__(first_name, last_name, location, profession)
+        self.privileges = ['добавлять сообщения', 'удалять сообщения', 
+                        'банить пользователей', 'удалять ползьвателей']
+    def show_privileges(self):
+        """Выводит список привелегий администратора"""
+        for privileges in self.privileges:
+            print('Admin allowed to ' + privileges.title())
 
 
-n = User('dan', 'leo', 'perm', 'coder')
-print(n.describe_user())
-
-n.info_login_attempts()
-
-n.increment_login_attempts()
-n.increment_login_attempts()
-n.increment_login_attempts()
-n.increment_login_attempts()
-n.info_login_attempts()
-
-n.reset_login_attempts()
-n.info_login_attempts()
-
+a = Admin('dan','leo','prm','prgrm')
+a.show_privileges()
 
 
 
