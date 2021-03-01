@@ -51,7 +51,7 @@ glossary = {
 for info in glossary:
     print(info.title() + glossary[info] + '.')
 
-print('\nУпражнение 6-4\n')
+print('\nУпражнение 6-5\n')
 
 river_party = {
     'nile': 'egypt',
