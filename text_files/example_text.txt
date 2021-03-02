@@ -1,0 +1,4 @@
+Jen's favorite language are: Python, Ruby
+Sarah's favorite language is: C
+Edward's favorite language are: Ruby,Go
+Phil's favorite language are: Python, Haskell

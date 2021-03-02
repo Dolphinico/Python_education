@@ -1,16 +1,17 @@
 from collections import OrderedDict
+
 glossary = OrderedDict()
-glossary = {
-    'оператор': ' - это символ, который выполняет операцию над одним или несколькими операндами',
-    'операнд': ' - операндом выступает переменная или значение, над которыми проводится операция',
-    'метод': ' - метод связан с конкретным объектом списка и знает, что именно его он должен модифицировать',
-    'переменная': ' - обозначенная область памяти, содержащая какое-то значение',
-    'конкатенация': ' - означает соединение или добавление двух объектов вместе',
-    'словарь': ' - набор пар ключ-значение, помогающее держать информацию об одном или нескольих объектах',
-    'python': ' - замечательный и интересный язык программирования',
-    'pep8': ' - этот документ описывает соглашение о том, как писать код для языка python, включая стандартную библиотеку, входящую в состав python',
-    '.keys()': ' - метод для определения ключа в паре ключ-значение',
-    '.values()': ' - метод для определения значения в паре ключ-значение',
-}
-for name, mention in glossary.items():
-    print(name.title() + mention + '.')
+
+glossary['string'] = 'A series of characters.'
+glossary['comment'] = 'A note in a program that the Python interpreter ignores.'
+glossary['list'] = 'A collection of items in a particular order.'
+glossary['loop'] = 'Work through a collection of items, one at a time.'
+glossary['dictionary'] = "A collection of key-value pairs."
+glossary['key'] = 'The first item in a key-value pair in a dictionary.'
+glossary['value'] = 'An item associated with a key in a dictionary.'
+glossary['conditional test'] = 'A comparison between two values.'
+glossary['float'] = 'A numerical value with a decimal component.'
+glossary['boolean expression'] = 'An expression that evaluates to True or False.'
+
+for word, definition in glossary.items():
+    print("\n" + word.title() + ": " + definition)
